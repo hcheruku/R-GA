@@ -1,0 +1,461 @@
+/* CSS for the site */
+
+/* Imported to use the google blog icon because I did not found it in the font-awesome icons
+@import url(http://weloveiconfonts.com/api/?family=brandico|zocial);
+brandico 
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+} */
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.row {
+  margin: 0;
+}
+
+
+
+
+/* ----- Navbar & Logo CSS ----- */
+
+.navbar {
+  margin: 0;
+  background-color: white;
+  border-radius: 0px !important;
+  border: none;
+  border-bottom: 3px solid #ccc;
+}
+
+img.site-logo {
+  margin: 10px 15px;
+  height: 80px;
+}
+
+
+
+
+/* ----- CSS for the website titles ----- */
+
+div {
+  &.title-block {
+    text-align: center;
+  }
+  &.title-block-2 {
+    text-align: center;
+    margin: 30px 0 10px 0;
+  }
+}
+
+img {
+  &.title-img {
+    padding-top: 25px;
+    margin: 10px;
+    height: 200px;
+  }
+  &.title-img-2 {
+    width: 30%;
+  }
+}
+
+p.title-text {
+  font-size: 20px;
+  line-height: 30px;
+  color: #999;
+  font-weight: 200;
+  font-family: 'Roboto', sans-serif;
+  margin: 30px 0 40px 0;
+}
+
+
+
+
+
+
+/* -----CSS for hero image ----- */
+
+div {
+  &.main-video-block {
+    background-color: #000;
+    clear: both;
+    text-align: center;
+  }
+  &.hero-image {
+    position: relative;
+  }
+}
+
+.play-icon {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  opacity: 0.5;
+  cursor: pointer;
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+/* CSS for makign the video responsive */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* -----CSS for bottom 3 images ----- */
+
+div.angular-block {
+  margin: 20px 0;
+}
+
+.poster-wrapper {
+  position: relative;
+}
+
+div.image-blocks {
+  padding: 20px;
+  position: relative;
+}
+
+.bottom-img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.overlay {
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  cursor: pointer;
+  height: 0%;
+}
+
+.poster-wrapper:hover .overlay {
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  height: 100%;
+}
+
+.bottom-image-desc {
+  bottom: 0px;
+  color: white;
+  left: 0px;
+  width: 100%;
+  margin: 0;
+  z-index: 20;
+  padding: 5px 25px;
+  position: absolute;
+  background: -webkit-gradient(linear, 0% 100%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+.bottom-image-h2 {
+  font-size: 40px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.poster-wrapper:hover {
+  .bottom-image-desc {
+    bottom: 40%;
+    text-align: center;
+    background: none;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .bottom-image-h2 {
+    font-size: 36px;
+  }
+}
+
+.bottom-image-link, .explore-icon {
+  color: #3B86FF;
+  font-weight: bold;
+}
+
+.bottom-image-link > a:hover {
+  text-decoration: none;
+  color: #3B86FF;
+}
+
+
+
+
+
+
+
+
+/* ----- CSS for social block ----- */
+
+div {
+  &.social-block {
+    text-align: center;
+    background-color: #3B86FF;
+    height: auto;
+    width: 100%;
+  }
+  &.social-icons {
+    padding: 0px;
+  }
+}
+
+ul.list-inline {
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.fa-stack {
+  color: white;
+}
+
+
+
+
+
+
+/* ----- CSS for footer ----- */
+
+div {
+  &.right-list, &.left-list {
+    padding: 0;
+  }
+}
+
+.footer-nav {
+  height: auto;
+  bottom: 0;
+}
+
+ul {
+  &.list-footer-left, &.list-footer-right {
+    padding: 0;
+    margin: 35px;
+    list-style: none;
+  }
+  &.list-footer-left > li {
+    display: inline-block;
+    padding: 0 15px;
+  }
+  &.list-footer-right > li {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+.follow {
+  color: black;
+}
+
+
+
+
+
+
+
+
+/* ------------------------- MEDIA QUERIES ------------------------- */
+
+@media screen and (max-width: 767px) {
+  img.site-logo {
+    margin: 10px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  img.title-img {
+    height: 70px;
+  }
+  p.title-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  img.title-img-2 {
+    width: 60%;
+  }
+  div {
+    &.title-block-2 {
+      padding: 5px;
+    }
+    &.right-list {
+      padding: 0 5px;
+    }
+  }
+  ul.list-footer-right > li.noshow {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  img.title-img {
+    height: 100px;
+  }
+  p.title-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  ul {
+    &.list-footer-left, &.list-footer-right {
+      margin: 10px;
+      list-style: none;
+    }
+  }
+  img.title-img-2 {
+    width: 70%;
+  }
+  div.title-block-2 {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  img.title-img {
+    height: 100px;
+  }
+  p.title-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  ul {
+    &.list-footer-left, &.list-footer-right {
+      margin: 10px;
+      list-style: none;
+    }
+  }
+  img.title-img-2 {
+    width: 50%;
+  }
+  div.title-block-2 {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  img.title-img {
+    height: 100px;
+  }
+  h2.bottom-image-h2 {
+    font-size: 16px;
+  }
+  .poster-wrapper:hover .bottom-image-h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  img.title-img {
+    height: 125px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  img.title-img-2 {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .play-icon {
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 767px) {
+  .play-icon {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .play-icon {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .poster-wrapper:hover .bottom-image-h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div {
+    &.image-blocks {
+      padding: 0;
+    }
+    &.img-1, &.img-2, &.img-3 {
+      margin: 5px 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.angular-block {
+    margin: 5px 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .bottom-image-h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    &.list-footer-left {
+      padding: 0;
+      margin: 5px;
+      list-style: none;
+      > li {
+        padding: 5px 10px;
+      }
+    }
+    &.list-footer-right {
+      margin: 5px 15px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ul.list-footer-right {
+    float: right;
+  }
+}

@@ -1,0 +1,197 @@
+<!--  R/GA take home interview Home page -->
+<!DOCTYPE html>
+<html ng-app="rgaApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,700,500,900,300,100' rel='stylesheet' type='text/css'>
+    <link href="css/app.css" rel="stylesheet">
+
+    <link rel="icon" href="icons/fav-icon.ico">
+
+	<title>R/GA Interview in Angular JS & Sass </title>
+</head>
+
+
+
+<body ng-controller="videoController">
+
+
+<!-- Top navbar -->
+<div class="row top-nav">
+<header>
+	<nav class="navbar navbar-default">
+	 	<img class="site-logo .responsive-image" src="images/site-logo2x.png" alt="Website logo">
+	</nav>
+</header>
+</div>
+
+
+
+
+<!-- Page title block -->
+<div class="row page-h1">
+<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 title-block" align="center">
+	<img class="title-img .responsive-image" src="images/title-img.png" alt="Website Heading">
+	<p class="title-text"> In the not-too-distant future., next Sunday, AD
+		There was a man. There was some puppets. It was amazing. 
+		These are the experiments of the SQL.
+	</p>
+</div>
+</div>
+
+
+
+
+
+<!-- Hero image block -->
+<div class="row main-img">
+<div class="row main-video-block">
+	<div id="hero-img-block" class="hero-image"> 
+		<img src="./images/hero-img2x.png" width="100%">
+		<img src="./images/play-icon.png" class="play-icon">					
+	</div>
+</div>
+</div>
+
+
+
+
+
+ <!-- Second title on the page -->
+<div class="row look-what-we-found">
+	<div class="col-sm-12 title-block-2">
+		<img class="title-img-2 .responsive-image" src="images/title-2-img.png" alt="Bottom Images Heading">
+	</div>
+</div>
+
+
+
+
+
+<!-- 3 Images block -->
+<div class="row angular-block">
+<div class="image-blocks"> 
+
+<div class="col-xs-12 col-sm-4 img-1" ng-repeat="video in videos">
+	<div class="poster-wrapper" data-toggle="modal" data-target="#videoModal" alt="{{video.youtubeId}}" ng-click="updateVideo(video.youtubeId)">
+		<img class="bottom-img .responsive-image" ng-src="{{video.image}}" alt="Bottom Image 1">
+		<div class="overlay"></div>
+		<div class="bottom-image-desc">
+		<h2 class="bottom-image-h2"> {{video.name}}</h2>
+		<p class="bottom-image-link" alt="{{video.youtubeId}}">EXPLORE &nbsp;<i class="explore-icon fa fa-arrow-circle-right fa-lg"></i> </p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Social media block -->
+<div class="row social-block"> 
+
+		<div class="social-icons">
+			<ul class="list-inline">
+			<li>
+				<a href="#" title="Twitter link"><i class="fa fa-twitter fa-2x fa-stack ">&nbsp;</i> <span class="sr-only sr-only-focusable">Twitter</span></a></li>
+			<li>
+				<a href="#" title="Facebook link"><i class="fa fa-facebook fa-2x fa-stack ">&nbsp;</i> <span class="sr-only sr-only-focusable">Facebook</span></a></li>
+			<li>
+				<a href="#" title="Google Plus link"><i class="fa fa-google-plus fa-2x fa-stack ">&nbsp;</i><span class="sr-only sr-only-focusable">Google Plus</span></a></li>
+			<li>
+				<a href="#" title="Pinterest link"><i class="fa fa-pinterest fa-2x fa-stack ">&nbsp;</i><span class="sr-only sr-only-focusable">Pinterest</span></a></li>
+				
+			</ul>
+
+		</div>
+
+
+</div>
+
+
+
+
+<!-- Footer block -->
+<footer>
+<div class="row footer-block">
+	<div class="footer-nav">
+
+	<!-- Left-options -->
+	<div class="left-list col-xs-12 col-sm-7">
+	<ul class="list-footer-left">
+		<li><i class="fa fa-question-circle">&nbsp;</i> Help </li>
+		<li> Privacy & Terms </li>
+		<li> English <i class="fa fa-chevron-down">&nbsp;</i></li>
+
+	</ul>
+	</div>
+
+
+	<!-- Right-options -->
+	<div class="right-list col-xs-12 col-sm-5">
+		<ul class="list-footer-right">
+		<li class="noshow"> Follow us on: &nbsp; </li>
+		<li>
+			<a href="#" title="Google Plus link"><i class="follow fa fa-google-plus-square fa-lg fa-stack "></i><span class="sr-only sr-only-focusable">Google Plus</span></a></li>
+
+		<!-- Tried using a free icon for blogger - did not match the size of font-awesome. Enable to see how it looks :-)
+		<li class="brandico-blogger-rect"></li> -->
+
+		<li>
+			<a href="#" title="Tumblr link"><i class="follow fa fa-tumblr-square fa-lg fa-stack "></i><span class="sr-only sr-only-focusable">Tumblr</span></a></li>
+
+		<li>
+			<a href="#" title="Youtube link"><i class="follow fa fa-youtube-play fa-lg fa-stack "></i><span class="sr-only sr-only-focusable">Youtube</span></a></li>
+	</ul>
+	</div>
+
+
+	</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.0-rc.0/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.0-rc.0/angular-sanitize.min.js"></script>
+	<script src="js/app.js"></script>
+
+</footer>
+
+
+
+
+
+<!-- Angular Implementation here -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="videoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ng-click="removeVideo()">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        
+      	<div class="video-container">
+      		<iframe class="modal-video" src="{{trustSrc(currentVideo)}}" width="560" height="315" ></iframe>
+      	</div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body> 
+</html>
